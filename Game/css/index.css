@@ -1,0 +1,196 @@
+ /* 清除内外边距 */
+*{
+	margin: 0;
+	padding: 0;
+}
+/* 设置body内子元素无法被选中 */
+body{
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+/* 游戏窗口大小及位置 */
+#app{
+	width: 320px;
+	height: 568px;
+	margin: 0 auto;
+}
+/*初始化界面*/
+.Start-bg-page{
+	/*display: none;*/
+	background-image: url(../img/开始背景.png);
+	height: 100%;
+	text-align: center;
+}
+/*开始按钮*/
+.StartGame{
+	width: 160px;
+	height: 45px;
+	margin-top: 280px;
+	border-radius: 10px;
+	background: none;
+	border: 1px solid black;
+	/* 清除按钮轮廓 */
+	outline: none;
+	cursor:pointer;
+}
+.StartGame:hover{ font-size:16px; }
+/* 游戏界面 */
+.game-page{
+	display: none;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	/* 清除鼠标样式 */
+	cursor: none;
+}
+/* 背景图片盒子 */
+.game-bg-box{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+/* 背景图片 */
+.game-bg{
+	background-image: url(../img/background_1.png);
+	height: 100%;
+}
+/* 己方飞机 */
+.MyPlan{
+	width: 66px;
+	height: 80px;
+	background-image: url(../img/myplan.gif);
+	position: absolute;
+	top: 460px;
+	left: calc(50% - 33px);
+}
+/* 子弹 */
+.bullet{
+	width: 6px;
+	height: 14px;
+	background-image: url(../img/bullet1.png);
+	display: inline-block;
+	position: absolute;
+}
+/* 小敌机 */
+.Enemy01{
+	width:34px;
+	height: 24px;
+	background-image: url("../img/enemy1_fly_1.png");
+	position: absolute;
+}
+/* 小敌机爆炸效果 */
+.Enemy01.active{ background-image: url(../img/小飞机爆炸.gif); }
+/* 中敌机 */
+.Enemy02{
+	width:46px;
+	height: 60px;
+	background-image: url("../img/enemy3_fly_1.png");
+	position: absolute;
+}
+/* 中敌机爆炸效果 */
+.Enemy02.active{ background-image: url(../img/中飞机爆炸.gif); }
+/* 大敌机 */
+.Enemy03{
+	width:110px;
+	height: 164px;
+	background-image: url("../img/enemy2_fly_1.png");
+	position: absolute;
+}
+/* 大敌机爆炸效果 */
+.Enemy03.active{ background-image: url(../img/大飞机爆炸.gif); }
+/* 生命值盒子 */
+.life-box-xiao{
+	width: 60%;
+	height: 3px;
+	border: 1px solid black;
+	position: absolute;
+	top: -10px;
+	left: 20%;
+	border-radius: 3px;
+	overflow: hidden;
+}
+/* 生命值 */
+.life-xiao{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: red;
+	position: absolute;
+	transition: width .3s;
+}
+.life-box-zhong{
+	width: 60%;
+	height: 3px;
+	border: 1px solid black;
+	position: absolute;
+	top: -10px;
+	left: 20%;
+	border-radius: 3px;
+	overflow: hidden;
+}
+/* 生命值 */
+.life-zhong{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: red;
+	position: absolute;
+	transition: width .3s;
+}
+.life-box-da{
+	width: 60%;
+	height: 3px;
+	border: 1px solid black;
+	position: absolute;
+	top: -10px;
+	left: 20%;
+	border-radius: 3px;
+	overflow: hidden;
+}
+/* 生命值 */
+.life-da{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: red;
+	position: absolute;
+	transition: width .3s;
+}
+/* 结束界面 */
+.over{
+	width: 160px;
+	height: 135px;
+	background:rgba(195, 200, 201,.9);
+	border-radius: 20px;
+	text-align: center;
+	border: 1px solid black;
+	overflow: hidden;
+	position: absolute;
+	top: calc(50% - 67px);
+	left: calc(50% - 75px);
+}
+/* 结算界面分数 */
+.over h4{
+	height: 66.6666%;
+	border-bottom: 1px solid black;
+	line-height: 40px;
+}
+/* 重新开始按钮 */
+.over button{
+	height: 33.3333%;
+	width: 100%;
+	border:none;
+	outline: none;
+	background:none;
+	cursor:pointer;
+}
+.over button:hover{ font-size:16px; }
+/* 游戏界面分数 */
+.game-page>h4{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 999;
+}
